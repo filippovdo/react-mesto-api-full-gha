@@ -3,8 +3,8 @@ const allowedCors = [
   'http://praktikum.tk',
   'http://localhost:3000',
   'http://127.0.0.1:3000',
-  'http://mestofront.anstpov.nomoredomains.monster',
-  'https://mestofront.anstpov.nomoredomains.monster',
+  'http://filippovdo.front.nomoredomainsmonster.ru', 
+  'https://filippovdo.front.nomoredomainsmonster.ru',
 ];
 
 module.exports = (req, res, next) => {
@@ -25,7 +25,7 @@ module.exports = (req, res, next) => {
     res.header('Access-Control-Allow-Methods', DEFAULT_ALLOWED_METHODS);
     res.header('Access-Control-Allow-Headers', requestHeaders);
     res.header('Access-Control-Allow-Credentials', true);
-    return res.end(); 
+    return res.end();
   }
 
   return next();
