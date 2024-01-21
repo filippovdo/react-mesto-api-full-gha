@@ -8,7 +8,9 @@ const { errorLogger, requestLogger } = require('./middlewares/logger');
 
 const allowedCors = [
   'https://api.domainname.filippovdo.nomoredomainsmonster.ru',
+  'http://api.domainname.filippovdo.nomoredomainsmonster.ru',
   'https://domainname.filippovdo.nomoredomainsmonster.ru',
+  'http://domainname.filippovdo.nomoredomainsmonster.ru',
   'http://localhost:3000',
 ];
 
