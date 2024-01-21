@@ -18,24 +18,13 @@ const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
 
 const app = express();
 app.use(requestLogger);
+
+// Используйте cors для управления CORS
 app.use(cors({
   origin: allowedCors,
   methods: DEFAULT_ALLOWED_METHODS,
 }));
-app.use((req, res, next) => {
-  const { method } = req;
-  if (method === 'OPTIONS') {
-    res.header('Access-Control-Allow-Methods', DEFAULT_ALLOWED_METHODS);
-    res.end();
-  }
 
-  const { origin } = req.headers;
-  if (allowedCors.includes(origin)) {
-    res.header('Access-Control-Allow-Origin', origin);
-  }
-
-  next();
-});
 const port = 3000;
 
 const { login, createUser } = require('./controllers/user');
@@ -100,7 +89,6 @@ app.use((err, req, res, next) => {
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
 
 app.listen(port, () => {
-  // eslint-disable-next-line no-console
   console.log(`Example app listening on port ${port}`);
 });
 
