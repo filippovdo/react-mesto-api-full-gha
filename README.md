@@ -7,6 +7,6 @@ https://github.com/filippovdo/react-mesto-api-full-gha
 
 IP-адрес 158.160.137.18
 
-Frontend http://filippovdo.nomoredomainsmonster.ru
+Frontend https://filippovdo.nomoredomainsmonster.ru
 
-Backend http://api.filippovdo.nomoredomainsmonster.ru
+Backend https://api.filippovdo.nomoredomainsmonster.ru
