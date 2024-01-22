@@ -72,12 +72,14 @@ app.use(auth);
 app.use(usersRouter);
 app.use(cardsRouter);
 
-app.use(errorLogger);
-app.use(errors());
-
 app.use((req, res, next) => {
   next(new NotFoundError('Тут ничего нет'));
 });
+
+app.use(errorLogger);
+app.use(errors());
+
+
 
 app.use((err, req, res, next) => {
   res
